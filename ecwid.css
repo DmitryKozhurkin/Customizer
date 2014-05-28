@@ -268,8 +268,8 @@ div.ecwid-categories-MenuBarPopup td.gwt-MenuItem {
 /******************************************************************************/
 
 div.ecwid-minicart {
-    /*background: #007fff url(http://sexymaika.ru/i/minicart_target.png) no-repeat;*/
-    background: #ce1126 url(http://sexymaika.ru/i/minicart_target.png) no-repeat;
+    /*background: #007fff url(http://sexymaika.herokuapp.com/i/minicart_target.png) no-repeat;*/
+    background: #ce1126 url(http://sexymaika.herokuapp.com/i/minicart_target.png) no-repeat;
     filter: expression(fixPNG_crop(this));
     background-position: top left;
     width: 159px;
@@ -356,7 +356,7 @@ div.ecwid-minicart-clickArea {
 /* Styles indicating that a product is being moved over the widget */
 div.ecwid-minicart-dropTargetEngage {
     /*background-position: bottom right;*/
-    background: #41bb19 url(http://sexymaika.ru/i/minicart_target.png) no-repeat;
+    background: #41bb19 url(http://sexymaika.herokuapp.com/i/minicart_target.png) no-repeat;
 }
 div.ecwid-minicart-dropTargetEngage span.ecwid-minicart-label-text {
     background-color: #f1ffa6;
@@ -837,7 +837,7 @@ div.ecwid-ProductBrowser-auth-anonim, div.ecwid-ProductBrowser-auth-logged {
 div.ecwid-ProductBrowser-auth-anonim > a.gwt-Anchor {
     color: transparent;
     background-color: #ddd;
-    background-image: url(http://sexymaika.ru/i/enter.png);
+    background-image: url(http://sexymaika.herokuapp.com/i/enter.png);
     padding: 5px 20px;
     background-size: 100%;
 }
@@ -1624,7 +1624,7 @@ div.ecwid-loadingIndicator-cursor {
 /* The close button in the right upper corner of Ecwid popup */
 button.ecwid-popup-closeButton {
     cursor: pointer;
-    background: transparent url(http://sexymaika.ru/i/popup_close.png) no-repeat center center;
+    background: transparent url(http://sexymaika.herokuapp.com/i/popup_close.png) no-repeat center center;
     filter: expression(fixPNG_crop(this));
     border: none;
     width: 20px;
@@ -2938,7 +2938,7 @@ input.ecwid-productBrowser-details-qtyTextField {
 /* The "In the bag" icon and text */
 div.ecwid-productBrowser-details-inTheBag {
     position: relative; /* workaround for a bug in IE6 */
-    background: transparent url(http://sexymaika.ru/i/bag.png) no-repeat left center;
+    background: transparent url(http://sexymaika.herokuapp.com/i/bag.png) no-repeat left center;
     filter: expression(fixPNG_crop(this));
     height: 56px;
 }
@@ -2969,19 +2969,19 @@ div.ecwid-AddToBagButton-ie6 {
 /* The "Add to bag" button in up state */
 div.ecwid-AddToBagButton-up, div.ecwid-AddToBagButton-up-hovering,
 div.ecwid-AddToBagButton-ie6-up, div.ecwid-AddToBagButton-ie6-up-hovering {
-    background: #007fff url(http://sexymaika.ru/i/add_to_bag.png) no-repeat top center;
+    background: #007fff url(http://sexymaika.herokuapp.com/i/add_to_bag.png) no-repeat top center;
 }
 
 /* The "Add to bag" button in down state */
 div.ecwid-AddToBagButton-down, div.ecwid-AddToBagButton-down-hovering,
 div.ecwid-AddToBagButton-ie6-down, div.ecwid-AddToBagButton-ie6-down-hovering {
-    background: #41bb19 url(http://sexymaika.ru/i/add_to_bag.png) no-repeat top center;
+    background: #41bb19 url(http://sexymaika.herokuapp.com/i/add_to_bag.png) no-repeat top center;
 }
 
 /* The "Add to bag" button in IE6 (hack) */
 div.ecwid-AddToBagButton-ie6-up, div.ecwid-AddToBagButton-ie6-up-hovering,
 div.ecwid-AddToBagButton-ie6-down, div.ecwid-AddToBagButton-ie6-down-hovering {
-    background: #007fff url(http://sexymaika.ru/i/add_to_bag.png);
+    background: #007fff url(http://sexymaika.herokuapp.com/i/add_to_bag.png);
 }
 
 div.ecwid-AddToBagButton-up-disabled, div.ecwid-AddToBagButton-down-disabled,
@@ -3007,19 +3007,19 @@ div.ecwid-ContinueShoppingButton-ie6 {
 /* The "Continue Shopping" button in up state */
 div.ecwid-ContinueShoppingButton-up, div.ecwid-ContinueShoppingButton-up-hovering,
 div.ecwid-ContinueShoppingButton-ie6-up, div.ecwid-ContinueShoppingButton-ie6-up-hovering {
-    background: #007fff url(http://sexymaika.ru/i/continue_shopping.png) no-repeat top center;
+    background: #007fff url(http://sexymaika.herokuapp.com/i/continue_shopping.png) no-repeat top center;
 }
 
 /* The "Continue Shopping" button in down state */
 div.ecwid-ContinueShoppingButton-down, div.ecwid-ContinueShoppingButton-down-hovering,
 div.ecwid-ContinueShoppingButton-ie6-down, div.ecwid-ContinueShoppingButton-ie6-down-hovering {
-    background: #41bb19 url(http://sexymaika.ru/i/continue_shopping.png) no-repeat top center;
+    background: #41bb19 url(http://sexymaika.herokuapp.com/i/continue_shopping.png) no-repeat top center;
 }
 
 /* The "Continue Shopping" button in IE6 (hack) */
 div.ecwid-ContinueShoppingButton-ie6-up, div.ecwid-ContinueShoppingButton-ie6-up-hovering,
 div.ecwid-ContinueShoppingButton-ie6-down, div.ecwid-ContinueShoppingButton-ie6-down-hovering {
-    background: #007fff url(http://sexymaika.ru/i/continue_shopping.png);
+    background: #007fff url(http://sexymaika.herokuapp.com/i/continue_shopping.png);
 }
 
 div.ecwid-productBrowser-details div.ecwid-ContinueShoppingButton,
@@ -3747,19 +3747,19 @@ div.ecwid-productBrowser-cart-checkoutButton-ie6 {
 /* The "Checkout" button in up state */
 div.ecwid-productBrowser-cart-checkoutButton-up, div.ecwid-productBrowser-cart-checkoutButton-up-hovering,
 div.ecwid-productBrowser-cart-checkoutButton-ie6-up, div.ecwid-productBrowser-cart-checkoutButton-ie6-up-hovering {
-    background: #007fff url(http://sexymaika.ru/i/checkout.png) no-repeat top center;
+    background: #007fff url(http://sexymaika.herokuapp.com/i/checkout.png) no-repeat top center;
 }
 
 /* The "Checkout" button in down state */
 div.ecwid-productBrowser-cart-checkoutButton-down, div.ecwid-productBrowser-cart-checkoutButton-down-hovering,
 div.ecwid-productBrowser-cart-checkoutButton-ie6-down, div.ecwid-productBrowser-cart-checkoutButton-ie6-down-hovering {
-    background: #41bb19 url(http://sexymaika.ru/i/checkout.png) no-repeat top center;
+    background: #41bb19 url(http://sexymaika.herokuapp.com/i/checkout.png) no-repeat top center;
 }
 
 /* The "Checkout" button in IE6 (hack) */
 div.ecwid-productBrowser-cart-checkoutButton-ie6-up, div.ecwid-productBrowser-cart-checkoutButton-ie6-up-hovering,
 div.ecwid-productBrowser-cart-checkoutButton-ie6-down, div.ecwid-productBrowser-cart-checkoutButton-ie6-down-hovering {
-    background: #007fff url(http://sexymaika.ru/i/checkout.png);
+    background: #007fff url(http://sexymaika.herokuapp.com/i/checkout.png);
 }
 
 /* The "Checkout" button on the shopping bag view */
@@ -4168,19 +4168,19 @@ div.ecwid-Checkout-placeOrderButton-ie6 {
 /* The "Place Order" button in up state */
 div.ecwid-Checkout-placeOrderButton-up, div.ecwid-Checkout-placeOrderButton-up-hovering,
 div.ecwid-Checkout-placeOrderButton-ie6-up, div.ecwid-Checkout-placeOrderButton-ie6-up-hovering {
-    background: #007fff url(http://sexymaika.ru/i/place_order.png) no-repeat top center;
+    background: #007fff url(http://sexymaika.herokuapp.com/i/place_order.png) no-repeat top center;
 }
 
 /* The "Place Order" button in down state */
 div.ecwid-Checkout-placeOrderButton-down, div.ecwid-Checkout-placeOrderButton-down-hovering,
 div.ecwid-Checkout-placeOrderButton-ie6-down, div.ecwid-Checkout-placeOrderButton-ie6-down-hovering {
-    background: #41bb19 url(http://sexymaika.ru/i/place_order.png) no-repeat top center;
+    background: #41bb19 url(http://sexymaika.herokuapp.com/i/place_order.png) no-repeat top center;
 }
 
 /* The "Place Order" button in IE6 (hack) */
 div.ecwid-Checkout-placeOrderButton-ie6-up, div.ecwid-Checkout-placeOrderButton-ie6-up-hovering,
 div.ecwid-Checkout-placeOrderButton-ie6-down, div.ecwid-Checkout-placeOrderButton-ie6-down-hovering {
-    background: #007fff url(http://sexymaika.ru/i/place_order.png);
+    background: #007fff url(http://sexymaika.herokuapp.com/i/place_order.png);
 }
 
 /* The breadcrumbs on checkout */
@@ -4731,21 +4731,21 @@ a.ecwid-productBrowser-nav-left, a.ecwid-productBrowser-nav-right {
 }
 
 a.ecwid-productBrowser-nav-left {
-    background: url(http://sexymaika.ru/i/prevnext.png) center -22px no-repeat;
+    background: url(http://sexymaika.herokuapp.com/i/prevnext.png) center -22px no-repeat;
 }
 
 a.ecwid-productBrowser-nav-right {
-    background: url(http://sexymaika.ru/i/prevnext.png) center -66px no-repeat; 
+    background: url(http://sexymaika.herokuapp.com/i/prevnext.png) center -66px no-repeat; 
 }
 
 a.ecwid-productBrowser-nav-left:hover,
 a.ecwid-productBrowser-nav-left:active {
-    background: url(http://sexymaika.ru/i/prevnext.png) center 0px no-repeat;
+    background: url(http://sexymaika.herokuapp.com/i/prevnext.png) center 0px no-repeat;
 }
 
 a.ecwid-productBrowser-nav-right:hover,
 a.ecwid-productBrowser-nav-right:active {
-    background: url(http://sexymaika.ru/i/prevnext.png) center -44px no-repeat;
+    background: url(http://sexymaika.herokuapp.com/i/prevnext.png) center -44px no-repeat;
 }
 
 .ecwid-productBrowser-details-rightPanel div.ecwid-productBrowser-sharePanel-header {
