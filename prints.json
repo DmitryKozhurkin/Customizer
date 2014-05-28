@@ -1,0 +1,28 @@
+{
+	"растровые":[
+		"./i/maikalogo.gif",
+		"./i/prints/disney_club_penguin.png",
+		"./i/prints/fc-barcelona-logo.png",
+		"./i/prints/manchester-united-logo.png",
+		"./i/prints/fc-chelsea.png"
+	],
+	"векторные":[
+		"./i/prints/svg.svg",
+		"./i/prints/watering_girl.svg",
+		"./i/prints/turkey.svg",
+		"./i/prints/valet.svg",
+		"./i/prints/gaz-21.svg",
+		"./i/prints/cuckoo.svg",
+		"./i/prints/boy_and_cat_fishing.svg",
+		"./i/prints/arduino.svg",
+		"./i/prints/bicycle.svg",
+		"./i/prints/cutler.svg",
+		"./i/prints/hummingbird.svg",
+		"./i/prints/sandalias.svg",
+		"./i/prints/tree.svg",
+		"./i/prints/lion-vector.svg",
+		"./i/prints/guitar.png",
+		"./i/prints/man_and_guitar.png",
+		"./i/prints/guitar_hero.png"
+	]
+}

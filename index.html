@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>сексимайка — магазин одежды</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=560, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<link href="./css/styles.css" rel="stylesheet">
+		<link href="./bootstrap/css/bootstrap-cosmo.css" rel="stylesheet">
+		<link href="./css/sexyslider.css" rel="stylesheet">
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="./js/sexyslider.js"></script>
+		<script type="text/javascript">
+			$(function($) {
+				$('#sexyslider').sexyslider({
+					width:'90%'
+				})
+				/*.animate(
+					{'top':'100'},
+					{'duration':1000, 'easing':'easeOutBounce'}
+				)*/
+				//.hide().show('shake',1000)
+				var logo = $('img:eq(0)').click((function(){
+					var arr=['./i/maikalogo2.gif','./i/maikalogo3.gif','./i/maikalogo4.gif','./i/maikalogo.gif','./i/maikalogo_old.gif'];
+					return function(){
+						var curr = arr.shift()
+						logo.attr('src',curr)
+						arr.push(curr)
+					}
+				})())
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="container-narrow">
+
+			<div class="masthead">
+
+				<ul class="nav nav-pills pull-right main-menu">
+					<li class="active"><a href="index.html"><span class="icon-home"></span></a></li>
+					<li><a href="shop.html">Магазин</a></li>
+					<li><a href="shop.html#!/~/category/id=6175998">Партнеры</a></li>
+					<li><a href="#contacts.html">Контакты</a></li>
+				</ul>
+
+				<img src="./i/maikalogo_old.gif" id="logo" class="pull-left" style="margin-right:10px; width:45px;">
+				<h3 class="no-muted no-hide">sexymaika</h3>
+
+			</div>
+
+			<div id="sexyslider" class="sexyslider">
+				<div class="slide">
+					<img src="slider_i/1.jpg" />
+					<h1 style="position:absolute; top:35%; left:12%;">Ёу.</h1>
+					<div style="position:absolute; top:20%; right:12%;"><h1>SEXYSEX!</h1></div>
+					<script> $('div').last().css({'transform': 'rotate(-20deg)'}) </script>
+				</div>
+				<div class="slide">
+					<img src="slider_i/2.jpg" />
+					<h1 style="position:absolute; top:20%; right:5%; padding:5px; background:rgba(255,50,0, 0.4); white-space:nowrap">У нас всё самое секси!</h1>
+
+				</div>
+				<div class="slide">
+					<img src="slider_i/3.jpg" />
+				</div>
+				<div class="slide">
+					<img src="slider_i/4.jpg" />
+				</div>
+				<div class="slide">
+					<img src="slider_i/5.jpg" />
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="jumbotron">
+				<h1>Скидка 10%</h1>
+				<p class="lead">Скидка 10% на футболки с фирменными принтами!</p>
+				<a class="btn btn btn-success" href="shop.html">Хочу!</a>
+			</div>
+
+			<hr>
+
+			<div class="footer">
+				<p>&copy; сексимайка 2013</p>
+			</div>
+
+		</div> 
+
+	</body>
+</html>

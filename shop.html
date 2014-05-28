@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>сексимайка — магазин одежды</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=560, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<link href="./css/styles.css" rel="stylesheet">
+		<link href="./bootstrap/css/bootstrap-cosmo.css" rel="stylesheet">
+		<link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
+		<link href="./css/farbtastic.css" rel="stylesheet">
+		<link href="./css/customizer.css" rel="stylesheet">
+
+		<script type="text/javascript" src="./js/underscore.js"></script>
+		<script type="text/javascript" src="./js/loc_store.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="./js/base64.min.js"></script>
+		<script type="text/javascript" src="./js/farbtastic.js"></script>
+		<script type="text/javascript" src="./js/customizer.js"></script>
+
+	</head>
+
+	<body>
+
+		<script type="text/javascript" src="http://app.ecwid.com/script.js?2403109" charset="utf-8"></script>
+		<script type="text/javascript">
+		Ecwid.OnAPILoaded.add(function(page){
+			console.log('########## OnAPILoaded',arguments);
+			$(document.body).customizer();
+		})
+		window.basket_hack_func = function(){
+			$('.ecwid-productBrowser-cart-optionsList-name').each(function(){
+				if ($(this).text()=='Уникальный идентификатор:') {
+					var id = $(this).parent();
+					id.hide()
+					var cnt_value = id.next().find('.ecwid-productBrowser-cart-optionsList-value');
+					cnt_value.text(cnt_value.text().split('###')[0].trim())
+					id.parent().children('span').last().addClass('nextbuttonhide')
+				}
+			})
+			var basket_hack_handler = function(){
+				var value = $(this).parents('.ecwid-productBrowser-cart-itemsTable-cell').parent()
+				.find('.ecwid-productBrowser-cart-optionsList-value').eq(0).text().replace(/\u200B/g,'')
+				if (value) window.basket_hack = JSON.parse(value.trim())
+				//$(window).unbind('click.basket_hack');
+				clearInterval(window.basket_hack_interval) 
+			}
+			$('.ecwid-productBrowser-cart-itemsTable').find('a')//.css({'outline':'solid 2px #f00'})
+			.unbind('click.basket_hack').unbind('keydown.basket_hack')
+			.bind('click.basket_hack',basket_hack_handler).bind('keydown.basket_hack',basket_hack_handler)
+		}
+		Ecwid.OnPageLoaded.add(function(page){
+			console.log('########## OnPageLoaded',arguments);
+
+			// ---------- Хак с фоном
+			partners = {
+				'url(./i/test_bg.png)': [6247833,6247835,6247834]
+			}
+			var partner_bg = 'none'//url(./i/maikalogo2.gif)';
+			for (var i in partners) {
+				if (partners[i].indexOf(page.categoryId)!=-1) {
+					partner_bg = i;
+					break;
+				}
+			}
+			$(document.body).css('background-image',partner_bg)
+
+			// ---------- Хак со ссылкой партнеры
+			var active_page = 1;
+			if ([6175998].indexOf(page.categoryId)!=-1) active_page = 2;
+			$('ul.main-menu').find('li').removeClass('active').eq(active_page).addClass('active')
+
+			// ---------- Хак корзины
+			clearInterval(window.basket_hack_interval) 
+			//$(window).unbind('click.basket_hack');
+			if (page.type=='CART'){
+				window.basket_hack_func();
+				//$(window).bind('click.basket_hack',window.basket_hack_func)
+				window.basket_hack_interval = setInterval(window.basket_hack_func,500)
+			}
+
+			// ---------- Кастомайзер
+			var data = $('#customizer-data');
+			if (data.length) {
+				var opts = data.text() ? JSON.parse(data.text()) : {};
+				console.log('########## reloadWidget',data.text())
+				$(document.body).customizer('reload',opts);
+			} else {
+				console.log('########## clearWidget')
+				$(document.body).customizer('clear');
+			}
+
+			window.basket_hack = null;
+		})
+
+		var svg = function(img,color){
+			$.get(img||'./i/prints/watering_girl.svg',function(){
+				var svg = arguments[2].responseText;
+				console.log(svg);
+				$('img').eq(0).attr('src','data:image/svg+xml;charset=utf-8;base64,'+Base64.encode(svg.replace(/#000000/g,color||'#ccc'))).width(80)
+			})
+		}
+
+		var gb = function(img){
+			var c = document.createElement('canvas');
+			var ctx = c.getContext("2d");
+			ctx.drawImage(img, 10, 10);
+			console.log(c,c.toDataURL());
+		}
+
+		</script>
+
+		<div class="container-narrow">
+
+			<div class="masthead">
+
+				<div class="pull-right">
+					<!-- remove layout parameter if you want to position minicart yourself -->
+					<script type="text/javascript">
+						xMinicart();
+					</script>
+				</div>
+
+				<ul class="nav nav-pills pull-right main-menu">
+					<li><a href="index.html"><span class="icon-home"></span></a></li>
+					<li class="active"><a href="#">Магазин</a></li>
+					<li><a href="#!/~/category/id=6175998">Партнеры</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+				</ul>
+
+				<a href="index.html" class="logo">
+					<img src="./i/maikalogo.gif" id="logo" class="pull-left" style="margin-right:10px; width:45px;">
+					<h3 class="no-muted no-hide">сексимайка</h3>
+				</a>
+
+			</div>
+
+			<hr>
+
+			<div id="my-store-2403109">Если Ваш браузер не поддерживает JavaScript, пожалуйста, перейдите на <a href="http://app.ecwid.com/jsp/2403109/catalog">HTML версию</a></div><div>
+				<script type="text/javascript">
+					xProductBrowser("categoriesPerRow=3","views=grid(3,3) list(10) table(20)","categoryView=grid","searchView=list","style=","id=my-store-2403109");
+				</script>
+			</div>
+
+			<hr>
+
+			<div class="footer">
+				<p>&copy; сексимайка 2013</p>
+			</div>
+		</div> 
+
+	</body>
+</html>
