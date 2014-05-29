@@ -30,3 +30,17 @@ a.logo:hover {
 	color: #000;
 	text-decoration: none;
 }
+
+/*span.highlight {
+	zoom: 0.75;
+	color: white;
+	background: #000;
+	padding: 0px 0.4em;
+	margin: 0.2em;
+	vertical-align: middle;
+}*/
+
+span.highlight {
+	color: transparent;
+	text-shadow: 0 0 0.4em rgba(0,0,0,0.5);
+}

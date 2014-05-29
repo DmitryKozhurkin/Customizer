@@ -22,6 +22,7 @@
 		<script type="text/javascript" src="./js/base64.min.js"></script>
 		<script type="text/javascript" src="./js/farbtastic.js"></script>
 		<script type="text/javascript" src="./js/customizer.js"></script>
+		<script type="text/javascript" src="./js/highlight.js"></script>
 
 	</head>
 
@@ -112,6 +113,10 @@
 			ctx.drawImage(img, 10, 10);
 			console.log(c,c.toDataURL());
 		}
+
+		$(function($) {
+			if (!localStorage.nocensor) $('body').highlight('sexysex sexy sex секси секс sexysex')
+		})
 
 		</script>
 
